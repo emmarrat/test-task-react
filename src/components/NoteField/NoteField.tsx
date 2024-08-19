@@ -12,13 +12,13 @@ export const NoteField: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
-      <p className="text-lg font-semibold mb-2">Add a Note:</p>
+    <div className='w-full'>
+      <p className='text-lg font-semibold mb-2'>Add a Note:</p>
       <textarea
         value={note}
         onChange={handleNoteChange}
-        placeholder="Enter your note here"
-        className="mt-1 p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder='Enter your note here'
+        className='mt-1 p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500'
         rows={4}
       />
     </div>

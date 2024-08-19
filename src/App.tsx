@@ -1,9 +1,7 @@
 import { Discounts } from '@/pages';
 
 function App() {
-  return (
-    <Discounts />
-  );
+  return <Discounts />;
 }
 
 export default App;

@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectDiscountCode, setDiscountCode } from '@/dispatchers/discountsSlice.ts';
+import {
+  selectDiscountCode,
+  setDiscountCode,
+} from '@/dispatchers/discountsSlice.ts';
 import { Discount, DiscountPattern } from '@/shared/constants.ts';
-
 
 export const DiscountCodeInput: React.FC = () => {
   const dispatch = useDispatch();
@@ -24,22 +26,23 @@ export const DiscountCodeInput: React.FC = () => {
   };
 
   return (
-    <div className="w-full">
-      <p className="text-lg font-semibold mb-2">Enter Discount Code:</p>
+    <div className='w-full'>
+      <p className='text-lg font-semibold mb-2'>Enter Discount Code:</p>
       <input
-        type="text"
+        type='text'
         value={discountCode}
         onChange={handleDiscountCodeChange}
-        placeholder="Enter code"
+        placeholder='Enter code'
         className={`mt-1 p-2 border rounded w-full focus:outline-none focus:ring-2 focus:ring-blue-500 ${getBorderColor()}`}
       />
-      {!!discountCode.length && (
-        validateDiscountCode(discountCode) ? (
-          <p className="text-green-500 text-sm mt-1">Valid discount code!</p>
+      {!!discountCode.length &&
+        (validateDiscountCode(discountCode) ? (
+          <p className='text-green-500 text-sm mt-1'>Valid discount code!</p>
         ) : (
-          <p className="text-red-500 text-sm mt-1">Invalid discount code. Try something like: {Discount}</p>
-        )
-      )}
+          <p className='text-red-500 text-sm mt-1'>
+            Invalid discount code. Try something like: {Discount}
+          </p>
+        ))}
     </div>
   );
 };
