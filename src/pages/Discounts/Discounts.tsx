@@ -1,5 +1,6 @@
 import RadioGroup from '@/components/RadioGroup/RadioGroup.tsx';
 import DiscountCodeInput from '@/components/DiscountCodeInput/DiscountCodeInput.tsx';
+import GenerateCodeButton from '@/components/GenerateCodeButton/GenerateCodeButton.tsx';
 
 const Discounts = () => {
   return (
@@ -7,6 +8,7 @@ const Discounts = () => {
       <div className="p-6 bg-white rounded-lg shadow-md space-y-6 w-full max-w-md">
         <RadioGroup />
         <DiscountCodeInput/>
+        <GenerateCodeButton/>
       </div>
     </div>
   );
