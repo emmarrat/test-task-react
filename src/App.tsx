@@ -1,5 +1,4 @@
-import './App.css';
-import Discounts from '@/pages/Discounts/Discounts.tsx';
+import { Discounts } from '@/pages';
 
 function App() {
   return (

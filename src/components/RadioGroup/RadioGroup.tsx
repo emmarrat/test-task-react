@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/app/hooks.ts';
 import { selectedOptions, selectOptions, setSelectedOption } from '@/dispatchers/discountsSlice.ts';
 
-const RadioGroup: React.FC = () => {
+export const RadioGroup: React.FC = () => {
   const dispatch = useDispatch();
   const selectedOption = useAppSelector(selectedOptions);
   const options = useAppSelector(selectOptions);
@@ -32,5 +32,3 @@ const RadioGroup: React.FC = () => {
     </div>
   );
 };
-
-export default RadioGroup;

@@ -4,7 +4,7 @@ import { selectDiscountCode, setDiscountCode } from '@/dispatchers/discountsSlic
 import { Discount, DiscountPattern } from '@/shared/constants.ts';
 
 
-const DiscountCodeInput: React.FC = () => {
+export const DiscountCodeInput: React.FC = () => {
   const dispatch = useDispatch();
   const discountCode = useSelector(selectDiscountCode);
 
@@ -46,5 +46,3 @@ const DiscountCodeInput: React.FC = () => {
     </div>
   );
 };
-
-export default DiscountCodeInput;

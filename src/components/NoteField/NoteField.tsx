@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/app/hooks.ts';
 import { selectNote, setNote } from '@/dispatchers/discountsSlice.ts';
 
-const NoteField: React.FC = () => {
+export const NoteField: React.FC = () => {
   const dispatch = useDispatch();
   const note = useAppSelector(selectNote);
 
@@ -24,5 +24,3 @@ const NoteField: React.FC = () => {
     </div>
   );
 };
-
-export default NoteField;

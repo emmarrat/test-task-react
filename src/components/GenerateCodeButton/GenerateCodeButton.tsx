@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NewCode } from '@/shared/constants.ts';
 
-const GenerateCodeButton: React.FC = () => {
+export const GenerateCodeButton: React.FC = () => {
   const [generatedCode, setGeneratedCode] = useState<string>('');
 
   const handleGenerateCode = () => {
@@ -22,5 +22,3 @@ const GenerateCodeButton: React.FC = () => {
     </div>
   );
 };
-
-export default GenerateCodeButton;
