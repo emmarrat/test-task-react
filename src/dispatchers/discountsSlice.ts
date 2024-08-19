@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { RootState } from '@/app/store.ts';
 
 interface IDiscountState {
   selectedOption: string;
@@ -30,3 +31,8 @@ const discountSlice = createSlice({
 
 export const discountsReducer = discountSlice.reducer;
 export const { setSelectedOption, setDiscountCode, setNote } = discountSlice.actions;
+
+export const selectedOptions = (state: RootState) =>
+  state.discounts.selectedOption;
+export const selectDiscountCode = (state: RootState) => state.discounts.discountCode;
+export const selectNote = (state: RootState) => state.discounts.note;
