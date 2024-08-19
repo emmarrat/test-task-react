@@ -1,12 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useAppSelector } from '@/app/hooks.ts';
-import { selectedOptions, setSelectedOption } from '@/dispatchers/discountsSlice.ts';
-import { Options } from '@/shared/constants.ts';
+import { selectedOptions, selectOptions, setSelectedOption } from '@/dispatchers/discountsSlice.ts';
 
 const RadioGroup: React.FC = () => {
   const dispatch = useDispatch();
   const selectedOption = useAppSelector(selectedOptions);
+  const options = useAppSelector(selectOptions);
 
   const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(setSelectedOption(e.target.value));
@@ -16,7 +16,7 @@ const RadioGroup: React.FC = () => {
     <div className="w-full">
       <p className="text-lg font-semibold mb-2">Select an Option:</p>
       <div className="flex flex-col justify-center md:flex-row space-y-2 md:space-y-0 md:space-x-4">
-        {Options.map((option) => (
+        {options.map((option) => (
           <label key={option} className="flex items-center space-x-2">
             <input
               type="radio"
