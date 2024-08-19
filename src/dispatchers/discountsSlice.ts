@@ -10,7 +10,7 @@ interface IDiscountState {
 }
 
 const initialState: IDiscountState = {
-  selectedOption: 'Option A',
+  selectedOption: Options[0],
   discountCode: '',
   note: '',
   options: Options,
